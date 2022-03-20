@@ -1,0 +1,22 @@
+Host github.com.ghmk # ghmk
+  HostName github.com
+  User git
+  Port 22
+  IdentityFile ~/.ssh/id_ed25519_ghmk
+  TCPKeepAlive yes
+  IdentitiesOnly yes
+
+Host github.com # ghhiron
+  HostName github.com
+  User git
+  Port 22
+  IdentityFile ~/.ssh/id_ed25519
+  TCPKeepAlive yes
+  IdentitiesOnly yes
+
+Host bitbucket.org # bb .bitbucket
+  HostName bitbucket.org
+  IdentityFile ~/.ssh/id_ed25519_bitbucket
+  User git
+  TCPKeepAlive yes
+  IdentitiesOnly yes
