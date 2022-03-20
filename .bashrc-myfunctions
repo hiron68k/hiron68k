@@ -1,0 +1,25 @@
+gu()
+{
+  if [ $# -ne 1 ]; then
+    echo 'Usage: gu [ghmk|ghhiron|bb]'
+  elif [ "$1" = 'ghmk' ]; then
+    git config --global user.name 'h-satoh'
+    git config --global user.email 'h-satoh@mksc.jp'
+    echo switched to mksc account@github
+  elif [ "$1" = 'ghhiron' ]; then
+    git config --global user.name 'Hiron68k'
+    git config --global user.email 'hiron.de.dosukoi@gmail.com'
+    echo switched to hiron@github
+  elif [ "$1" = 'bb' ]; then
+    git config --global user.name 'Hiron_s'
+    git config --global user.email 'hiron.de.dosukoi@gmail.com'
+    echo switched to hiron@bitbucket
+  else
+    echo 'Usage: gu [ghmk|ghhiron|bb]'
+  fi
+}
+
+gitdelbranch()
+{
+  git branch --merged|egrep -v '\*|develop|main|master'|xargs git branch -d
+}
